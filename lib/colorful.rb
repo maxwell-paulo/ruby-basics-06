@@ -47,10 +47,11 @@ return result
 end
 
 
-puts colorful?(123)  # Should return "false"
+puts colorful?(263)  # Should return "true"
 puts colorful?(326)  # Should return "false"
 puts colorful?(263)  # Should return "true"
 puts colorful?(100)  # Should return "false"
 puts colorful?(2630) # Should return "false"
 puts colorful?(234) #  Should return "true"
 puts colorful?(2361) # Should return "false"
+puts colorful?(123)  # Should return "false"
