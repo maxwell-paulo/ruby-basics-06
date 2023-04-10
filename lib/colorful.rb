@@ -3,7 +3,6 @@ def colorful?(number)
   arr = []
 second_arr = []
 
-
 # Push each number character in the array arr
 for char in number.to_s.each_char
   arr.push(char.to_i)
@@ -31,7 +30,9 @@ for n in second_arr do
 end
 
 # Push the variable count in the array arr
+if number.to_s.length > 2
 arr.push(count)
+end
 
 # Check if there is some repeated number in the array arr
 result = true
@@ -41,6 +42,11 @@ arr.each_with_index do |c, i|
       result = false
     end
   end
+end
+
+# Check if the number has only one character
+if number.to_s.length == 1
+  result = true
 end
 
 return result
@@ -55,3 +61,6 @@ puts colorful?(2630) # Should return "false"
 puts colorful?(234) #  Should return "true"
 puts colorful?(2361) # Should return "false"
 puts colorful?(123)  # Should return "false"
+puts colorful?(0) # Should return "true"
+puts colorful?(1) # Should return "true"
+puts colorful?(23) # Should return "true"
